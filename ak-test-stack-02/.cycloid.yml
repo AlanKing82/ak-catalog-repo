@@ -29,3 +29,13 @@ config:
       main:
         path: 'terraform/main.tf.sample'
         destination: '($ .config_root $)/terraform/main.tf'
+  demo:
+    name: 'this is the demo use-case'
+    pipeline:
+      pipeline:
+        path: 'pipeline/pipeline.yml'
+      variables:
+        path: 'pipeline/variables.sample.yml'
+        destination: '($ .org $)/($ .project $)/($ .env $)/($ .component $)/pipeline/variables.yml'
+        # Or better, use the `config_root` special var that does the same as the above
+        destination: '($ .config_root $)/pipeline/variables.yml'
