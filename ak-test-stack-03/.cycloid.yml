@@ -20,3 +20,7 @@ config:
             variables:
                 destination: ($ project $)/($ environment $)/pipeline/variables-($ component $).yml
                 path: pipeline/default/variables.sample.yaml
+        terraform:
+            ak-test-stack-03:
+                destination: ($ project $)/terraform/($ environment $)/($ component $)/ak-test-stack-03.tf
+                path: terraform/default/ak-test-stack-03.tf.sample

@@ -1,0 +1,4 @@
+module "ak-test-stack-03" {
+  source = "./module-ak-test-stack-03"
+}
+
